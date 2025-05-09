@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connected Links Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        a i {
+            margin-right: 8px;
+        }
+    </style>
+    <script>
+        function goToNextPage(currentPage) {
+            let nextPage;
+
+            if (currentPage === 1) {
+                nextPage = "page2.html";
+            } else if (currentPage === 2) {
+                nextPage = "page3.html";
+            } else if (currentPage === 3) {
+                nextPage = "page4.html";
+            } else {
+                nextPage = "page1.html";  // For Page 4, it loops back to Page 1
+            }
+
+            window.location.href = nextPage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Connected Links</h1>
+
+    <a href="javascript:void(0)" onclick="goToNextPage(1)">
+        <i>➡️</i> Go to Page 1 → Explore more content
+    </a><br>
+
+    <a href="javascript:void(0)" onclick="goToNextPage(2)">
+        <i>🌍</i> Go to Page 2 → Keep the journey going
+    </a><br>
+
+    <a href="javascript:void(0)" onclick="goToNextPage(3)">
+        <i>🚀</i> Go to Page 3 → Almost at the finish line
+    </a><br>
+
+    <a href="javascript:void(0)" onclick="goToNextPage(4)">
+        <i>🔁</i> Go to Page 4 → Start over
+    </a>
+
+</body>
+</html>
